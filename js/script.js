@@ -106,4 +106,4 @@ document.getElementById('load-quote').addEventListener("click", printQuote, fals
  * timing function - also triggers change event
 ***/
 
-setInterval(printQuote, 10000);
+setInterval(printQuote, 20000);
