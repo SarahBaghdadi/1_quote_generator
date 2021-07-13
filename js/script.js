@@ -65,10 +65,9 @@ const quotes = [
 /***
  * `getRandomQuote` function - returns a random quote object from the array.
 ***/
-
+const randomNumber = upper => Math.floor(Math.random() * upper);
 const getRandomQuote = () => {
-  const randomNumber = Math.floor(Math.random() * quotes.length);
-  return quotes[randomNumber];
+  return quotes[randomNumber(quotes.length)];
 };
 
 /***
@@ -89,8 +88,7 @@ const getRandomQuote = () => {
   html += `</p>`;
   document.getElementById('quote-box').innerHTML = html; 
   let randomRGB = () => {
-    let randomNumber = (upper) => Math.floor(Math.random() * upper +1);
-    let RGB = `rgb(${randomNumber(256)}, ${randomNumber(256)}, ${randomNumber(256)})`;
+    let RGB = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
     document.getElementById('body').style.background = RGB;
   };
   randomRGB();
